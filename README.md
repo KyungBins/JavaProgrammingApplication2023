@@ -1,1 +1,2 @@
-This repository contains JAVA pratice code and assignments used in the JAVA Programming Application course.
+This repository contains Java practice code and assignments used in the 'Java Programming Applications' course. Welcome all~
+
