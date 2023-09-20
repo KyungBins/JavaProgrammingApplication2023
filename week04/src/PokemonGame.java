@@ -7,33 +7,36 @@ public class PokemonGame {
 //        System.out.println((int)(Math.random()*6)+1); // 1.0 <= x <= 6.0
         
         //적군 포켓몬스터 랜덤생성
+        Pokemon enemy = null;
         int enemyPick = ((int)(Math.random()*3));
         if (enemyPick == 0){
             NoFly noFly = new NoFly();
-            Pikachu pikachu = new Pikachu(noFly);
+            enemy = new Pikachu(noFly);
         } else if(enemyPick == 1){
             NoFly noFly = new NoFly();
-            Squirtle squirtle = new Squirtle(noFly);
+            enemy = new Squirtle(noFly);
         } else if(enemyPick == 2){
             Wings wings = new Wings();
-            Charizard charizard = new Charizard(wings);
+            enemy = new Charizard(wings);
         } else {
             System.out.println("여기는 영원히 실행 안됩니다.");
         }
 
         //플레이어 포켓몬스터 선택
+        //Pokemon player = new Pokemon();//추상 클래스의 객체는 생성 불가
+        Pokemon player = null; //추상클래스의 변수 선언은 가능 (upcasting 용)
         Scanner scanner = new Scanner(System.in);
         System.out.println("포켓몬을 고르세요.\n1) 피카츄  2) 꼬부기  3) 리자몽");
         int pokemonPick = scanner.nextInt();
         if (pokemonPick == 1){
             NoFly noFly = new NoFly();
-            Pikachu p1 = new Pikachu(noFly);
+            player = new Pikachu(noFly);
         } else if (pokemonPick == 2){
             NoFly noFly = new NoFly();
-            Squirtle s1 = new Squirtle(noFly);
+            player = new Squirtle(noFly);
         } else if (pokemonPick == 3){
             Wings wings = new Wings();
-            Charizard c1 = new Charizard(wings);
+            player = new Charizard(wings);
         } else {
             System.out.println("정상적인 값이 아닙니다!");
         }
@@ -43,7 +46,7 @@ public class PokemonGame {
             System.out.print("\t1) 전투   2) 도망   3) 종료  : ");
             menu = scanner.nextInt();
             if(menu == 1){
-
+                player.attack(enemy);
             } else if (menu == 2){
 
             } else{
