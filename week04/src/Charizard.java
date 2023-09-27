@@ -1,7 +1,8 @@
 public class Charizard extends Pokemon{
     public Charizard(Flyable f) {
-        System.out.println("리자아아");
+        System.out.println("자몽자몽~");
         this.level = 36;
+        this.attackRate = 94;
 //      this.setLevel(36);
         this.setHp(78);
         this.name = "리자몽";
