@@ -11,8 +11,14 @@ public class Pikachu extends Pokemon{
         this.name = "피카츄";
         //this.flyable = new Pokemonster.NoFly();  // Association, Has-a (Composition)
         this.flyable = f;
-        this.skills = new String[]{"십만볼트", "스파크", "볼부비부비"};
-        this.specialAttackRate = new int[]{90, 65, 20};
+//        this.skills = new String[]{"십만볼트", "스파크", "볼부비부비"};
+//        this.specialAttackRate = new int[]{90, 65, 20};
+        skills.add("십만볼트");
+        skills.add("스파크");
+        skills.add("볼부비부비");
+        specialAttackRate.add(90);
+        specialAttackRate.add(65);
+        specialAttackRate.add(20);
     }
 
     @Override
