@@ -62,9 +62,12 @@ public class PokemonGame {
                     enemy.attack(player, (int)(Math.random() * 3)+1);
                 }else if(menu == 2){
 
-                }else{
+                }else if(menu == 3){
                     System.out.println("게임을 종료합니다.");
                     break;
+                }
+                else{
+                    System.out.println("메뉴에서 선택해주세요");
                 }
             }
         }catch(InputMismatchException err){
@@ -76,7 +79,8 @@ public class PokemonGame {
         }catch (IndexOutOfBoundsException err){
             System.out.println("존재하지 않는 스킬입니다. 기술 범위를 벗어남");
             System.out.println("예외 내용 : " + err.getMessage());
-        }catch (Exception err){
+        }
+        catch (Exception err){
             System.out.println("예외가 발생했습니다.");
             System.out.println("예외 내용 : " + err.getMessage());
         }
